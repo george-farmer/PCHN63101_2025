@@ -1,0 +1,5 @@
+output_dir: "docs"       # GitHub Pages serves files from the 'docs' folder
+delete_merged_file: true # Optional: Deletes intermediate markdown files
+language:
+  ui:
+    chapter_name: "Workshop "
