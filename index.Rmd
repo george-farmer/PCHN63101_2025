@@ -17,8 +17,7 @@ bibliography:
 
 **Unit Lead:** George Farmer
 
-Welcome to the Advanced Data Skills, Open Science and Reproducibility M.Res. unit PCHN63101. This unit will be taught via a flipped classroom model. Make sure you go through the content on this site in advance of the in-person sessions. These are held on Mondays from 1 to 3pm in the Coupland 3 Building in room room LG.118.
+Welcome to the Advanced Data Skills, Open Science and Reproducibility M.Res. unit PCHN63101. This unit will be taught via a flipped classroom model. Make sure you go through the content on this site in advance of the in-person sessions. These are held on Mondays from 1 to 3pm in the Coupland 3 Building in room LG.118.
 
 For questions about the course you can contact me via email (george.farmer@manchester.ac.uk). If you have any questions or technical problems relating to each week's content, please post these on the Canvas discussion board.
 
-There are two assignments associated with this unit. The full details of these (plus hand in dates) can be found on the Canvas page for this unit.
