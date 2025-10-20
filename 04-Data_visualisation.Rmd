@@ -358,9 +358,6 @@ NHANES_tidied %>%
   facet_wrap(~ Education)
 ```
 
-## Your Challenge (do this during the in-person session)
-
-Create some new visualisations with either the `mpg` or `NHANES` datasets. There are many possible visualisations you could build with either dataset.
 
 ## Additional Resources
 

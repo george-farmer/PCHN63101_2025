@@ -45,8 +45,6 @@ summary-statistics
 geom_violin
 plotting-interaction-effects
 histograms-with-facet_wrap
-your-challenge-do-this-during-the-in-person-session-1
 additional-resources
 r-markdown
 overview
-your-challenge-do-this-during-the-in-person-session-2
