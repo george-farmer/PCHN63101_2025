@@ -237,7 +237,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="data-visualisation" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">Workshop 4</span> Data Visualisation<a href="data-visualisation.html#data-visualisation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Being able to build clear visualisations is key to the successful communication of your data to your intended audience.</p>
-<p>There are a couple of great recent books focused on data visualisation that I suggest you have a look it. They both provide great perspectives on data visualisations and are full of wonderful examples of different kinds of data visualisations, some of which you’ll learn how to build in this workshop.</p>
+<p>There are a couple of great recent books focused on data visualisation that I suggest you have a look at. They both provide great perspectives on data visualisations and are full of wonderful examples of different kinds of data visualisations, some of which you’ll learn how to build in this workshop.</p>
 <p>If you click on the image of the Claus Wilke book, you’ll be taken to the online version of the book (written in R, obviously!)</p>
 <p>  </p>
 <center>
@@ -256,7 +256,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">4.1</span> The Basics of ggplot2<a href="data-visualisation.html#the-basics-of-ggplot2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>First we need to load the ggplot2 package. As it is part of the Tidyverse (and we’re likely to be using other Tidyverse packages alongside ggplot2), we load it into our library using the <code>library(tidyverse)</code> line of code.</p>
 <div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="data-visualisation.html#cb82-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
-<p>In the video, I mention that using ggplot2 requires us to specify some core information in order to build our visualisations. These include the raw data that you want to plot, geometries (or geoms) that are the geometric shapes that will represent the data, and the aesthetics of the geometric and objects, such as color, size, shape and position.</p>
+<p>Using ggplot2 requires us to specify some core information in order to build our visualisations. These include the raw data that you want to plot, geometries (or geoms) that are the geometric shapes that will represent the data, and the aesthetics of the geometric and objects, such as color, size, shape and position.</p>
 </div>
 <div id="your-first-visualisation" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Your First Visualisation<a href="data-visualisation.html#your-first-visualisation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -325,7 +325,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="using-facet_wrap" class="section level3 hasAnchor" number="4.2.4">
 <h3><span class="header-section-number">4.2.4</span> Using <code>facet_wrap()</code><a href="data-visualisation.html#using-facet_wrap" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We might think that fuel economy varies as a function of the type of vehicle (e.g., sports cars may be more fuel hungry than midsize cars) and by the number size of engine (e.g., cars with bigger engines may be more fuel hungry). In the visualisation below we’re going to use the <code>facet_wrap()</code> function to build a separate visualisation for each level of the factor we are facetting over (ignoring SUVs).</p>
+<p>We might think that fuel economy varies as a function of the type of vehicle (e.g., sports cars may be more fuel hungry than midsize cars) and by the size of engine (e.g., cars with bigger engines may be more fuel hungry). In the visualisation below we’re going to use the <code>facet_wrap()</code> function to build a separate visualisation for each level of the factor we are facetting over (ignoring SUVs).</p>
 <div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="data-visualisation.html#cb89-1" tabindex="-1"></a>mpg <span class="sc">%&gt;%</span></span>
 <span id="cb89-2"><a href="data-visualisation.html#cb89-2" tabindex="-1"></a>  <span class="fu">filter</span>(class <span class="sc">!=</span> <span class="st">&quot;suv&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb89-3"><a href="data-visualisation.html#cb89-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">class =</span> <span class="fu">str_to_title</span>(class)) <span class="sc">%&gt;%</span></span>
@@ -404,21 +404,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>We see there are 76 columns and 10,000 rows. If we use the function <code>head()</code> we can see the first few rows of the dataframe.</p>
 <div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="data-visualisation.html#cb99-1" tabindex="-1"></a><span class="fu">head</span>(NHANES)</span></code></pre></div>
 <pre><code>## # A tibble: 6 × 76
-##      ID SurveyYr Gender   Age AgeDecade AgeMonths Race1 Race3 Education    MaritalStatus HHIncome   
-##   &lt;int&gt; &lt;fct&gt;    &lt;fct&gt;  &lt;int&gt; &lt;fct&gt;         &lt;int&gt; &lt;fct&gt; &lt;fct&gt; &lt;fct&gt;        &lt;fct&gt;         &lt;fct&gt;      
-## 1 51624 2009_10  male      34 &quot; 30-39&quot;        409 White &lt;NA&gt;  High School  Married       25000-34999
-## 2 51624 2009_10  male      34 &quot; 30-39&quot;        409 White &lt;NA&gt;  High School  Married       25000-34999
-## 3 51624 2009_10  male      34 &quot; 30-39&quot;        409 White &lt;NA&gt;  High School  Married       25000-34999
-## 4 51625 2009_10  male       4 &quot; 0-9&quot;           49 Other &lt;NA&gt;  &lt;NA&gt;         &lt;NA&gt;          20000-24999
-## 5 51630 2009_10  female    49 &quot; 40-49&quot;        596 White &lt;NA&gt;  Some College LivePartner   35000-44999
-## 6 51638 2009_10  male       9 &quot; 0-9&quot;          115 White &lt;NA&gt;  &lt;NA&gt;         &lt;NA&gt;          75000-99999
-## # ℹ 65 more variables: HHIncomeMid &lt;int&gt;, Poverty &lt;dbl&gt;, HomeRooms &lt;int&gt;, HomeOwn &lt;fct&gt;, Work &lt;fct&gt;,
-## #   Weight &lt;dbl&gt;, Length &lt;dbl&gt;, HeadCirc &lt;dbl&gt;, Height &lt;dbl&gt;, BMI &lt;dbl&gt;, BMICatUnder20yrs &lt;fct&gt;,
-## #   BMI_WHO &lt;fct&gt;, Pulse &lt;int&gt;, BPSysAve &lt;int&gt;, BPDiaAve &lt;int&gt;, BPSys1 &lt;int&gt;, BPDia1 &lt;int&gt;,
-## #   BPSys2 &lt;int&gt;, BPDia2 &lt;int&gt;, BPSys3 &lt;int&gt;, BPDia3 &lt;int&gt;, Testosterone &lt;dbl&gt;, DirectChol &lt;dbl&gt;,
-## #   TotChol &lt;dbl&gt;, UrineVol1 &lt;int&gt;, UrineFlow1 &lt;dbl&gt;, UrineVol2 &lt;int&gt;, UrineFlow2 &lt;dbl&gt;,
-## #   Diabetes &lt;fct&gt;, DiabetesAge &lt;int&gt;, HealthGen &lt;fct&gt;, DaysPhysHlthBad &lt;int&gt;,
-## #   DaysMentHlthBad &lt;int&gt;, LittleInterest &lt;fct&gt;, Depressed &lt;fct&gt;, nPregnancies &lt;int&gt;, …</code></pre>
+##      ID SurveyYr Gender   Age AgeDecade AgeMonths Race1 Race3 Education    MaritalStatus
+##   &lt;int&gt; &lt;fct&gt;    &lt;fct&gt;  &lt;int&gt; &lt;fct&gt;         &lt;int&gt; &lt;fct&gt; &lt;fct&gt; &lt;fct&gt;        &lt;fct&gt;        
+## 1 51624 2009_10  male      34 &quot; 30-39&quot;        409 White &lt;NA&gt;  High School  Married      
+## 2 51624 2009_10  male      34 &quot; 30-39&quot;        409 White &lt;NA&gt;  High School  Married      
+## 3 51624 2009_10  male      34 &quot; 30-39&quot;        409 White &lt;NA&gt;  High School  Married      
+## 4 51625 2009_10  male       4 &quot; 0-9&quot;           49 Other &lt;NA&gt;  &lt;NA&gt;         &lt;NA&gt;         
+## 5 51630 2009_10  female    49 &quot; 40-49&quot;        596 White &lt;NA&gt;  Some College LivePartner  
+## 6 51638 2009_10  male       9 &quot; 0-9&quot;          115 White &lt;NA&gt;  &lt;NA&gt;         &lt;NA&gt;         
+## # ℹ 66 more variables: HHIncome &lt;fct&gt;, HHIncomeMid &lt;int&gt;, Poverty &lt;dbl&gt;,
+## #   HomeRooms &lt;int&gt;, HomeOwn &lt;fct&gt;, Work &lt;fct&gt;, Weight &lt;dbl&gt;, Length &lt;dbl&gt;,
+## #   HeadCirc &lt;dbl&gt;, Height &lt;dbl&gt;, BMI &lt;dbl&gt;, BMICatUnder20yrs &lt;fct&gt;, BMI_WHO &lt;fct&gt;,
+## #   Pulse &lt;int&gt;, BPSysAve &lt;int&gt;, BPDiaAve &lt;int&gt;, BPSys1 &lt;int&gt;, BPDia1 &lt;int&gt;,
+## #   BPSys2 &lt;int&gt;, BPDia2 &lt;int&gt;, BPSys3 &lt;int&gt;, BPDia3 &lt;int&gt;, Testosterone &lt;dbl&gt;,
+## #   DirectChol &lt;dbl&gt;, TotChol &lt;dbl&gt;, UrineVol1 &lt;int&gt;, UrineFlow1 &lt;dbl&gt;, UrineVol2 &lt;int&gt;,
+## #   UrineFlow2 &lt;dbl&gt;, Diabetes &lt;fct&gt;, DiabetesAge &lt;int&gt;, HealthGen &lt;fct&gt;, …</code></pre>
 <div id="tidying-the-data" class="section level3 hasAnchor" number="4.5.1">
 <h3><span class="header-section-number">4.5.1</span> Tidying the Data<a href="data-visualisation.html#tidying-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>It looks like some participants appear more than once in the dataset - this could be due to the oversampling mentioned in the description - the first few rows are all for participant ID 51624. We can use the <code>select()</code> function alongwith the <code>n_distinct()</code> function to tell us the unique number of IDs in the dataset.</p>
